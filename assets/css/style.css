@@ -9,6 +9,9 @@
 .bg-black {
     background: black;
 }
+.bg-blue-grey{
+    background: #424242;
+}
 
 .bg-twitter {
     background: #00aced;
@@ -24,4 +27,9 @@
 
 .bg-twitter {
     background: #00aced;
+}
+
+
+.no-display{
+    display: none;
 }
