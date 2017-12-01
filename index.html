@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
     <link rel="shortcut icon" type="image/png" href="assets/images/logo/lipipoint.png"/>
     <!--<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">-->
     <!--<link rel="stylesheet"-->
@@ -23,7 +25,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img src="assets/images/logo/lipipoint.png" alt="lipipoint" width="64" height="64" class="bg-black text-white">
+                <img src="assets/images/logo/lipipoint.png" alt="lipipoint" width="64" height="64"
+                     class="bg-black text-white">
                 Lipipoint
             </a>
 
@@ -289,147 +292,246 @@
         </div>
     </section>
     <!--- End Expertise Section -->
-    <!---  Google map Section -->
-    <section id="google-mmap">
+
+    <!-- Clients -->
+    <section id="clients" class="py-5">
         <div class="container">
-            <div class="py-5">
-                <h1 class="text-center">Location</h1>
+            <div class="pb-2">
+                <h1 class="text-center">Our Clients</h1>
                 <p class="text-center"><i class="fa fa-minus fa-3x"></i></p>
             </div>
-        </div>
-        <style>
-            #map {
-                height: 500px;
-                width: 100%;
-            }
-        </style>
-        <div id="map"></div>
-        <script>
-            function initMap() {
-                var uluru = {lat: 27.673136, lng: 85.422302};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15,
-                    center: uluru
-                });
-                var marker = new google.maps.Marker({
-                    position: uluru,
-                    map: map
-                });
-            }
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWjMs1TyZk2FOk7bjOcaTQeL8ymkgMhA&callback=initMap">
-        </script>
-
-    </section>
-    <!-- Section Maps Ends -->
-
-
-    <!-- Contact us section-->
-    <section id="contact-us">
-        <div class="container">
-            <div class="py-5">
-                <h1 class="text-center">Contact Us</h1>
-                <p class="text-center"><i class="fa fa-minus fa-3x"></i></p>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <form action="http://formspree.io/lipipoint@gmail.com"
-                          method="POST">
-                        <div class="form-group row">
-                            <div class="col-md-3">
-                                <label for="full_name">Full Name:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input class="form-control" type="text" name="name" required/>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-3">
-                                <label for="email">Email:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input class="form-control" type="email" name="email" required/>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-3">
-                                <label for="contact_number">Number:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <input class="form-control" type="text" name="contact_number"/>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-3">
-                                <label for="message">Message:</label>
-                            </div>
-                            <div class="col-md-9">
-                                <textarea class="form-control" rows=5 type="text" name="message" required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-9">
-                                <input type="submit" value="Sumbit" class="form-control btn btn-success">
-                            </div>
-                        </div>
-                    </form>
+            <div class="clients row">
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/healthmandu.png" alt="healthmandu" width="100%"
+                         height="100%">
+                    <div class="float-left small py-2">
+                        healthmandu
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h1>Drop Line</h1>
-                    <h6><i class="fa fa-envelope fa-3x"></i> Don't hesitate to contact us</h6>
-                    <hr>
-                    <p>Email: lipipoint@gmail.com</p>
-                    <p>Address: Bhaktapur, Nepal</p>
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/nepalunderground.png" alt="nepalunderground"
+                         width="100%" height="100%">
+                    <div class="float-left small py-2">
+                        nepalunderground
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- End  contact Section-->
-    <!--footer-->
-    <section id="footer" class="bg-black">
-        <div class="container p-3">
-            <div class="row offset-4">
-                <div class="p-3">
-                    <a href="https://facebook.com/lipipoint/" class="">
-                        <i class="fa fa-facebook-square fa-4x"></i>
-                    </a>
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/lipipoint.png" alt="nepalunderground" width="100%"
+                         height="100%">
+                    <div class="float-left small py-2">
+                        lipipoint
+                    </div>
                 </div>
-                <div class="p-3">
-                    <a href="https://twitter.com/lipipoint" class="">
-                        <i class="fa fa-twitter-square fa-4x"></i>
-                    </a>
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/healthmandu.png" alt="healthmandu" width="100%"
+                         height="100%">
+                    <div class="float-left small py-2">
+                        healthmandu
+                    </div>
                 </div>
-                <div class="p-3">
-                    <a href="https://plus.google.com/117423112742738953779/" class="">
-                        <i class="fa fa-google-plus-square fa-4x"></i>
-                    </a>
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/nepalunderground.png" alt="nepalunderground"
+                         width="100%" height="100%">
+                    <div class="float-left small py-2">
+                        nepalunderground
+                    </div>
                 </div>
-                <div class="p-3">
-                    <a href="https://github.com/lipipoint/">
-                        <i class="fa fa-github-square fa-4x"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="row offset-4">
-                <div class="col-md-12">
-                    <div class="Rights-Reserved">
-                        <h6>&copy; 2017 lipipoint - All Rights Reserved
-                            <a href="#"><span>Privacy</span></a> /
-                            <a href="#"><span>TOS</span></a> /
-                            <a href="#"><span>FAQ</span></a></h6>
+                <div class="card m-5 border-0">
+                    <img class="mx-auto" src="assets/images/clients/lipipoint.png" alt="nepalunderground" width="100%"
+                         height="100%">
+                    <div class="float-left small py-2">
+                        lipipoint
                     </div>
                 </div>
             </div>
+
         </div>
-    </section>
-    <!-- end footer section -->
+
+
+</div>
+</section>
+<!-- End Clients -->
+<!---  Google map Section -->
+<section id="google-map">
+    <div class="container">
+        <div class="py-5">
+            <h1 class="text-center">Location</h1>
+            <p class="text-center"><i class="fa fa-minus fa-3x"></i></p>
+        </div>
+    </div>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var uluru = {lat: 27.673136, lng: 85.422302};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFWjMs1TyZk2FOk7bjOcaTQeL8ymkgMhA&callback=initMap">
+    </script>
+
+</section>
+<!-- Section Maps Ends -->
+
+
+<!-- Contact us section-->
+<section id="contact-us">
+    <div class="container">
+        <div class="py-5">
+            <h1 class="text-center">Contact Us</h1>
+            <p class="text-center"><i class="fa fa-minus fa-3x"></i></p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form action="http://formspree.io/lipipoint@gmail.com"
+                      method="POST">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="full_name">Full Name:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" name="name" required/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="email">Email:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" type="email" name="email" required/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="contact_number">Number:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" name="contact_number"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <label for="message">Message:</label>
+                        </div>
+                        <div class="col-md-9">
+                            <textarea class="form-control" rows=5 type="text" name="message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-9">
+                            <input type="submit" value="Sumbit" class="form-control btn btn-success">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h1>Drop Line</h1>
+                <h6><i class="fa fa-envelope fa-3x"></i> Don't hesitate to contact us</h6>
+                <hr>
+                <p>Email: lipipoint@gmail.com</p>
+                <p>Address: Bhaktapur, Nepal</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End  contact Section-->
+<!--footer-->
+<section id="footer" class="bg-black">
+    <div class="container p-3">
+        <div class="row offset-4">
+            <div class="p-3">
+                <a href="https://facebook.com/lipipoint/" class="">
+                    <i class="fa fa-facebook-square fa-4x"></i>
+                </a>
+            </div>
+            <div class="p-3">
+                <a href="https://twitter.com/lipipoint" class="">
+                    <i class="fa fa-twitter-square fa-4x"></i>
+                </a>
+            </div>
+            <div class="p-3">
+                <a href="https://plus.google.com/117423112742738953779/" class="">
+                    <i class="fa fa-google-plus-square fa-4x"></i>
+                </a>
+            </div>
+            <div class="p-3">
+                <a href="https://github.com/lipipoint/">
+                    <i class="fa fa-github-square fa-4x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row offset-4">
+            <div class="col-md-12">
+                <div class="Rights-Reserved">
+                    <h6>&copy; 2017 lipipoint - All Rights Reserved
+                        <a href="#"><span>Privacy</span></a> /
+                        <a href="#"><span>TOS</span></a> /
+                        <a href="#"><span>FAQ</span></a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end footer section -->
 </div>
 <script src="assets/jquery/jquery.min.js"></script>
 <script src="assets/tether/tether.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/slick/slick.min.js"></script>
 
 <!--<script data-cfasync="false" type="text/javascript" src="assets/js/form-submission-handler.js"></script>-->
+<script>
+    $('.clients').slick({
+        dots: true,
+        infinite: true,
+        speed: 2000,
+        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true,
+                    arrows: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+</script>
 </body>
 </html>
